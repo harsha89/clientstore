@@ -1,0 +1,29 @@
+
+Installation
+============
+
+* Edit <ES_HOME>/repository/deployment/server/jaggeryapps/publisher/config/publisher-tenant.json as below
+	- "collections": ["gadgets", "sites", "ebooks", "mobileapps", "sitexs"]
+
+* Copy <SAMPLE_ZIP>/MobileAppLifeCycle.xml into <ES_HOME>/cp/MobileAppLifeCycle.xml
+
+* Edit <ES_HOME>/repository/deployment/server/jaggeryapps/store/config/store-tenant.json as below
+	- "assets": ["gadget", "site", "ebook", "mobileapp"],
+
+* Copy <SAMPLE_ZIP>/mobileapp directory into <ES_HOME>/repository/deployment/server/jaggeryapps/store/extensions/assets
+
+* Copy <SAMPLE_ZIP>/mobileapp.rxt into <ES_HOME>/repository/resources/rxts
+
+* Copy <SAMPLE_ZIP>/mobileapp.json into <ES_HOME>/repository/deployment/server/jaggeryapps/publisher/config/ext/mobileapp.json
+
+
+Usage
+=====
+
+* Go to https://localhost:9443/publisher
+* Login and create a Mobile Apps asset
+* Update the lifecycle states until it gets to published state
+* Login to the store and check the newly added mobileapp
+* Clicks on the "Install" button will give you a popup with your mobile devices
+	- These have been hardcoded in the sample
+* Clicks on the popup's install button will add to my items page 
