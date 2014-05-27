@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<artifactType type="application/vnd.wso2-supportproject+xml" shortName="supportproject" singularLabel="Support Project" pluralLabel="Support Projects"
+              hasNamespace="false" iconSet="10">
+    <storagePath>/supportproject/@{overview_name}</storagePath>
+    <nameAttribute>overview_name</nameAttribute>
+    <ui>
+       <list>
+            <column name="Provider">
+                <data type="path" value="overview_provider" href="@{storagePath}"/>
+            </column>
+             <column name="Name">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
+            </column>
+        </list>
+    </ui>
+    <content>
+        <table name="Overview">
+
+<field type="text" required="true">
+                <name>Provider</name>
+            </field>
+
+           <field type="options">
+                <name label="Category">Category</name>
+                <values>
+                    <value>Dev Support</value>
+                    <value>Dev Service</value>
+                    <value>Production</value>
+                </values>
+            </field>            
+            <field type="text" required="true">
+                <name>Name</name>
+            </field>
+            
+            <field type="date" required="true">
+                <name>Start Date</name>
+            </field>
+            <field type="date" required="true">
+                <name>End Date</name>
+            </field>
+             <field type="options">
+                <name label="Parent Project">ParentProject</name>
+                <values>
+                    <value>ESB</value>
+                    <value>AS</value>
+                    <value>ES</value>
+                </values>
+            </field>         
+ 	   
+        </table>
+       
+    </content>
+
+</artifactType>
