@@ -32,10 +32,10 @@
                 <name>Name</name>
             </field>
             
-            <field type="text" required="true">
+            <field type="date" required="true">
                 <name>Start Date</name>
             </field>
-            <field type="text" required="true">
+            <field type="date" required="true">
                 <name>End Date</name>
             </field>
              <field type="options">
