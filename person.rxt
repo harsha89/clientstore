@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<artifactType type="application/vnd.wso2-person+xml" shortName="person" singularLabel="Person" pluralLabel="People"
+              hasNamespace="false" iconSet="10">
+    <storagePath>/people/@{overview_name}</storagePath>
+    <nameAttribute>overview_name</nameAttribute>
+
+    <ui>
+        <list>
+            <column name="Provider">
+                <data type="path" value="overview_provider" href="@{storagePath}"/>
+            </column>
+            <column name="Name">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
+            </column>
+            <column name="Designation">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
+            </column>
+        </list>
+    </ui>
+
+    <content>
+        <table name="Overview">
+            <field type="text" required="true">
+                <name>Provider</name>
+            </field>
+            <field type="text" required="true">
+                <name>Name</name>
+            </field>
+            <field type="text" required="true">
+                <name>Designation</name>
+            </field>
+            <field type="text">
+                <name>Email</name>
+            </field>
+            <field type="text">
+                <name>Contact no</name>
+            </field>
+            <field type="text" required="true">
+                <name>Version</name>
+            </field>
+        </table>
+
+    </content>
+
+</artifactType>
