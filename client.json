@@ -1,5 +1,5 @@
 {
-    "applyTo": "mobileapp",
+    "applyTo": "client",
 
 
     "import": [
@@ -39,6 +39,11 @@
             "value": "true"
         },
         {
+            "field": "overview.version",
+            "name": "hidden",
+            "value": "true"
+        },
+        {
             "field": "overview.*",
             "name": "save",
             "value": "default"
@@ -63,26 +68,16 @@
             "name": "readOnly",
             "value": "true"
         },
-         {
+        {
             "field":"overview.provider",
             "name":"editable",
             "value":false
         },
-         {
+        {
             "field":"overview.name",
             "name":"editable",
             "value":false
-        },
-        {
-            "field": "overview.createdtime",
-            "name": "hidden",
-            "value": "true"
-        },
-        {
-            "field":"overview.version",
-            "name":"editable",
-            "value":false
-        },
+        }
     ],
 
     "fields": [
@@ -90,13 +85,8 @@
             "name": "lifeCycle",
             "table": "*",
             "label": "Life Cycle",
-            "value": "MobileAppLifeCycle"
+            "value": "ClientStoreAppLifeCycle"
 
-        },
-        {
-            "name": "banner",
-            "table": "images",
-            "type": "file"
         },
         {
             "name": "thumbnail",
@@ -107,8 +97,12 @@
             "name":"description",
             "table":"overview",
             "value":"The provider has not given a description."
+        },
+        {
+            "name":"version",
+            "table":"overview",
+            "value":"1.0.0"
         }
-
     ],
     "permissions": {
         "created": ["Internal/private_{overview_provider}"],
@@ -123,17 +117,6 @@
 
 
     "storage": {
-
-        "images_banner": {
-
-            "lifecycle": {
-                "created": ["Internal/private_{overview_provider}"],
-                "in-review": ["Internal/reviewer", "Internal/private_{overview_provider}"],
-                "published": ["Internal/everyone", "Internal/private_{overview_provider}", "Internal/reviewer"],
-                "unpublished": ["Internal/private_{overview_provider}"]
-            }
-        },
-
         "images_thumbnail": {
 
             "lifecycle": {
