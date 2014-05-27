@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<artifactType type="application/vnd.wso2-project+xml" shortName="project" singularLabel="Project" pluralLabel="Projects"
+              hasNamespace="false" iconSet="10">
+    <storagePath>/projects/@{overview_name}</storagePath>
+    <nameAttribute>overview_name</nameAttribute>
+    <ui>
+        <list>
+            <column name="Name">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
+            </column>
+            <column name="Client">
+                <data type="path" value="overview_client" href="@{storagePath}"/>
+            </column>
+            <column name="Owner">
+                <data type="path" value="overview_owner" href="@{storagePath}"/>
+            </column>
+        </list>
+    </ui>
+    <content>
+        <table name="Overview">
+            <field type="text" required="true">
+                <name>Name</name>
+            </field>
+            <field type="text" required="true">
+                <name>Provider</name>
+            </field>
+            <field type="options" required="true">
+                <name label="Client">Client</name>
+                <values>
+                    <value>Boeing</value>
+                    <value>T-Systems</value>
+                </values>
+            </field>
+            <field type="options" required="true">
+                <name label="Owner">Owner</name>
+                <values>
+                    <value>AB</value>
+                    <value>CD</value>
+                </values>
+            </field>
+            <field type="text-area">
+                <name>Description</name>
+            </field>
+            <field type="text" required="true">
+                <name>Version</name>
+            </field>
+            <field type="date">
+                <name>Start date</name>
+            </field>
+            <field type="text">
+                <name>Createdtime</name>
+            </field>
+
+        </table>
+        <table name="Documents">
+            <field type="text" url="true">
+                <name>QSP doc</name>
+            </field>
+            <field type="text" url="true">
+                <name>Architecture doc</name>
+            </field>
+            <field type="text" url="true">
+                <name>Future Enhancements doc</name>
+            </field>
+            <field type="text" url="true">
+                <name>Source Modification doc</name>
+            </field>
+        </table>
+    </content>
+
+</artifactType>
+
