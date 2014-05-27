@@ -32,10 +32,10 @@
                 <name>Name</name>
             </field>
             
-            <field type="date" required="true">
+            <field type="text" required="true">
                 <name>Start Date</name>
             </field>
-            <field type="date" required="true">
+            <field type="text" required="true">
                 <name>End Date</name>
             </field>
              <field type="options">
@@ -45,7 +45,10 @@
                     <value>AS</value>
                     <value>ES</value>
                 </values>
-            </field>         
+            </field>  
+             <field type="text" required="true">
+                <name>Version</name>
+            </field>       
  	   
         </table>
        

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <artifactType type="application/vnd.wso2-product+xml" shortName="product" singularLabel="Product" pluralLabel="Products"
               hasNamespace="false" iconSet="10">
-    <storagePath>/product//@{overview_name}/@{overview_version}</storagePath>
+    <storagePath>/product/@{overview_name}/@{overview_version}</storagePath>
     <nameAttribute>overview_name</nameAttribute>
     
   <ui>
@@ -24,13 +24,14 @@
                 <name>Provider</name>
             </field>
            <field type="options">
-                <name label="Product">Name</name>
+                <name label="Name">Name</name>
                 <values>
                     <value>ESB</value>
                     <value>AS</value>
                     <value>ES</value>
                 </values>
-            </field>            
+            </field>  
+            
             <field type="text" required="true">
                 <name>Version</name>
             </field>
@@ -45,4 +46,3 @@
     </content>
 
 </artifactType>
-

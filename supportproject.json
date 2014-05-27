@@ -80,11 +80,6 @@
             "field": "overview.version",
             "name": "hidden",
             "value": true
-        },
-        {
-            "name": "version",
-            "table": "overview",
-            "value": "1.0.0"
         }
     ],
 
@@ -94,7 +89,12 @@
             "table": "*",
             "label": "Life Cycle",
             "value": "SampleLifeCycle2"
-        } 
+        } ,
+        {
+            "name": "version",
+            "table": "overview",
+            "value": "1.0.0"
+        }
     ],
 
     "permissions": {
