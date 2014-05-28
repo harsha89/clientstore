@@ -23,8 +23,16 @@
 		<field type="text" required="true">
                 <name>Provider</name>
             </field>
+            <field type="options">
+                <name label="Support Project">Support Project</name>
+                <values>
+                    <value>ESB</value>
+                    <value>AS</value>
+                    <value>ES</value>
+                </values>
+            </field>  
            <field type="options">
-                <name label="Name">Name</name>
+                <name label="Product Name">Product Name</name>
                 <values>
                     <value>ESB</value>
                     <value>AS</value>
