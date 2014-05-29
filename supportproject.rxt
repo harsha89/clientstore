@@ -15,11 +15,16 @@
     </ui>
     <content>
         <table name="Overview">
-
+<subheading> <heading>Product Name</heading> <heading>Version</heading> </subheading>
 <field type="text" required="true">
                 <name>Provider</name>
             </field>
-
+ 	<field type="text" required="true">
+                <name>Name</name>
+            </field>
+          <field type="text" required="true">
+                <name>Key</name>
+            </field>  
            <field type="options">
                 <name label="Category">Category</name>
                 <values>
@@ -28,9 +33,7 @@
                     <value>Production</value>
                 </values>
             </field>            
-            <field type="text" required="true">
-                <name>Name</name>
-            </field>
+           
             
             <field type="date" required="true">
                 <name>Start Date</name>
@@ -38,14 +41,17 @@
             <field type="date" required="true">
                 <name>End Date</name>
             </field>
-             <field type="options">
-                <name label="Parent Project">ParentProject</name>
-                <values>
-                    <value>ESB</value>
-                    <value>AS</value>
-                    <value>ES</value>
-                </values>
-            </field>  
+             <field type="text" required="true">
+                <name>Parent Project</name>
+            </field>
+            
+            <field maxoccurs="unbounded" type="option-text">
+ 		<name label="Product">Product</name>
+ 		<values>
+ 		 <value>ESB</value><value>ES</value><value>AS Bots</value><value>IS</value>
+ 		</values>
+	   </field>
+              
              <field type="text" required="true">
                 <name>Version</name>
             </field>       
